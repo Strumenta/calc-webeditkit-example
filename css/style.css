@@ -1,0 +1,95 @@
+body {
+    font-family: monospace;
+}
+
+input.editable {
+    background-color: #DEF7FF;
+    padding: 3px;
+    border-style: none;
+    margin-right:0.4em;
+}
+
+span.fixed {
+    margin-right:0.4em;
+}
+
+.title {
+    font-size: 1.4em;
+}
+
+input:invalid {
+    background-color: #FFBDB3;
+}
+
+.default-cell-abstract {
+    background-color: #FFBDB3;
+}
+
+.missing-element {
+    background-color: #FFBDB3;
+    color: gray;
+}
+
+.default-cell-concrete {
+    background-color: #b123ff;
+}
+
+div.row {
+    min-height: 1em;
+    margin-bottom: 0.5em;
+}
+
+.strong {
+    font-weight: bold;
+    color: black;
+}
+
+.keyword {
+    font-weight: bold;
+    color: darkblue;
+}
+
+.type {
+    font-weight: bold;
+    color: darkgreen;
+}
+
+div.tab {
+    min-width: 2em;
+    display: inline-block;
+}
+
+div.vertical-collection {
+    display: inline-block;
+}
+
+div.horizontal-group {
+    display: inline-block;
+}
+
+input.fixed {
+    border-style: solid;
+    border-width: 0;
+    border-color: #aaa;
+}
+
+.autocomplete {
+    -webkit-box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.75);
+    padding: 2px;
+    background-color: #E6F1FE;
+}
+
+.autocomplete-item {
+    padding: 2px;
+}
+
+.autocomplete-item.selected {
+    background-color: #475D9D;
+    color: white;
+}
+
+.empty-collection {
+    color: gray;
+}
