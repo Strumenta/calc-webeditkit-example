@@ -34,6 +34,11 @@ input:invalid {
     background-color: #b123ff;
 }
 
+.deleting {
+    background-color: #FFBDB3;
+    border: 1px red solid;
+}
+
 div.row {
     min-height: 1em;
     margin-bottom: 0.5em;
@@ -71,6 +76,10 @@ input.fixed {
     border-style: solid;
     border-width: 0;
     border-color: #aaa;
+}
+
+input.keyword {
+    background: transparent;
 }
 
 .autocomplete {

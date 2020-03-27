@@ -8,6 +8,7 @@ const row = require('webeditkit').cells.row;
 const emptyRow = require('webeditkit').cells.emptyRow;
 const tabCell = require('webeditkit').cells.tabCell;
 const fixedCell = require('webeditkit').cells.fixedCell;
+const addInsertHook = require('webeditkit').cells.addInsertHook;
 const verticalCollectionCell = require('webeditkit').cells.verticalCollectionCell;
 
 $('document').ready(function(){
@@ -22,20 +23,18 @@ $('document').ready(function(){
         }
         return horizontalGroupCell(
             editableCell(modelNode, "name"),
-            fixedCell("of type", ["keyword"], null, function(){
-                modelNode.deleteMe();
-            }),
+            fixedCell(modelNode, "of type", ["keyword"]),
             childCell(modelNode, "type"));
     });
 
     registerRenderer("com.strumenta.financialcalc.StringType", function(modelNode) {
-        return fixedCell("string", ["type"], null, function(){
+        return fixedCell(modelNode, "string", ["type"], null, function(){
             modelNode.deleteMe();
         });
     });
 
     registerRenderer("com.strumenta.financialcalc.BooleanType", function(modelNode) {
-        return fixedCell("boolean", ["type"], null, function(){
+        return fixedCell(modelNode, "boolean", ["type"], null, function(){
             modelNode.deleteMe();
         });
     });
@@ -43,12 +42,12 @@ $('document').ready(function(){
     registerRenderer("com.strumenta.financialcalc.FinancialCalcSheet", function(modelNode) {
         return verticalGroupCell(
             row(
-                fixedCell("Calculations", ["title"]),
+                fixedCell(modelNode, "Calculations", ["title"]),
                 editableCell(modelNode, "name", ["title"])
             ),
             emptyRow(),
             row(
-                fixedCell("inputs:", ["strong"])
+                fixedCell(modelNode, "inputs:", ["strong"])
             ),
             row(
                 tabCell(),
