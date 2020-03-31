@@ -78,6 +78,10 @@ input.fixed {
     border-color: #aaa;
 }
 
+input.empty-collection:focus {
+    background-color: rgb(222, 219, 255);
+}
+
 input.keyword {
     background: transparent;
 }

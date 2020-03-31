@@ -1,15 +1,15 @@
 const webeditkit = require('webeditkit');
 const registerRenderer = require('webeditkit').registerRenderer;
-const verticalGroupCell = require('webeditkit').cells.verticalGroupCell;
-const horizontalGroupCell = require('webeditkit').cells.horizontalGroupCell;
-const editableCell = require('webeditkit').cells.editableCell;
-const childCell = require('webeditkit').cells.childCell;
-const row = require('webeditkit').cells.row;
-const emptyRow = require('webeditkit').cells.emptyRow;
-const tabCell = require('webeditkit').cells.tabCell;
-const fixedCell = require('webeditkit').cells.fixedCell;
-const addInsertHook = require('webeditkit').cells.addInsertHook;
-const verticalCollectionCell = require('webeditkit').cells.verticalCollectionCell;
+const verticalGroupCell = require('webeditkit').verticalGroupCell;
+const horizontalGroupCell = require('webeditkit').horizontalGroupCell;
+const editableCell = require('webeditkit').editableCell;
+const childCell = require('webeditkit').childCell;
+const row = require('webeditkit').row;
+const emptyRow = require('webeditkit').emptyRow;
+const tabCell = require('webeditkit').tabCell;
+const fixedCell = require('webeditkit').fixedCell;
+const addInsertHook = require('webeditkit').addInsertHook;
+const verticalCollectionCell = require('webeditkit').verticalCollectionCell;
 
 $('document').ready(function(){
 
