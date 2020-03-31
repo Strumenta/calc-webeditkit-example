@@ -2,7 +2,7 @@
 
 This is an example of web editor for MPS.
 
-To make it work you need [MPS Server]()
+To make it work you need [MPS Server](https://github.com/Strumenta/MPSServer). The example uses the [WebEditKit](https://github.com/Strumenta/webeditkit) framework, which is available on NPM.
 
 ## Verify MPS Server is working
 
