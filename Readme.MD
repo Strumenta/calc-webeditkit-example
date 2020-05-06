@@ -8,7 +8,7 @@ To make it work you need [MPS Server]()
 
 1. clone the repo (https://github.com/Strumenta/MPSServer)
 2. if you had cloned before run a git pull and clean everything (git clean -fdX)
-3. execute './gradlew buildLauncher && ./gradlew runLauncher'
+3. execute './gradlew runLauncher'
 4. visit http://localhost:2904/modules 
    -> You should see a large JSON file, this means MPS Server can get the list of modules 
 5. visit http://localhost:2904/models/com.strumenta.financialcalc.sandbox.company/324292001770075100
