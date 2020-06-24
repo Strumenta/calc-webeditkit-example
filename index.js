@@ -1,4 +1,5 @@
 const webeditkit = require('webeditkit');
+const Data = require('webeditkit/dist/presentation/cells').Data;
 const registerRenderer = require('webeditkit').registerRenderer;
 const verticalGroupCell = require('webeditkit').verticalGroupCell;
 const horizontalGroupCell = require('webeditkit').horizontalGroupCell;
@@ -8,21 +9,20 @@ const row = require('webeditkit').row;
 const emptyRow = require('webeditkit').emptyRow;
 const tabCell = require('webeditkit').tabCell;
 const fixedCell = require('webeditkit').fixedCell;
-const addInsertHook = require('webeditkit').addInsertHook;
 const verticalCollectionCell = require('webeditkit').verticalCollectionCell;
 
-$('document').ready(function(){
+$(function(){
 
     /////////////////////////////////////////////////
     // Specific renderers - start
     /////////////////////////////////////////////////
 
     registerRenderer("com.strumenta.financialcalc.Input", function(modelNode) {
-        if (modelNode == undefined) {
+        if (!modelNode) {
             throw "modelNode should not be undefined in renderer";
         }
         return horizontalGroupCell(
-            editableCell(modelNode, "name"),
+            editableCell(new Data(), modelNode, "name"),
             fixedCell(modelNode, "of type", ["keyword"]),
             childCell(modelNode, "type"));
     });
@@ -43,7 +43,7 @@ $('document').ready(function(){
         return verticalGroupCell(
             row(
                 fixedCell(modelNode, "Calculations", ["title"]),
-                editableCell(modelNode, "name", ["title"])
+                editableCell(new Data(), modelNode, "name", ["title"])
             ),
             emptyRow(),
             row(
