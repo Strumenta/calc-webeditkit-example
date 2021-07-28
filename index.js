@@ -1,5 +1,5 @@
 const webeditkit = require('webeditkit');
-const Data = require('webeditkit/dist/presentation/cells').Data;
+const Data = require('webeditkit/dist/presentation/cells/data').Data;
 const registerRenderer = require('webeditkit').registerRenderer;
 const verticalGroupCell = require('webeditkit').verticalGroupCell;
 const horizontalGroupCell = require('webeditkit').horizontalGroupCell;
